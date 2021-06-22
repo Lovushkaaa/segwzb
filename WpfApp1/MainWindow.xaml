@@ -1,0 +1,892 @@
+﻿<Window x:Class="WpfApp1.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WpfApp1"
+        mc:Ignorable="d"
+        MaxHeight="750"
+        MaxWidth="550"
+        MinHeight="750"
+        MinWidth="550"
+        Height="750"
+        Width="550"
+        Background="White">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition></RowDefinition>
+            <RowDefinition></RowDefinition>
+            <RowDefinition></RowDefinition>
+            <RowDefinition></RowDefinition>
+            <RowDefinition></RowDefinition>
+            <RowDefinition></RowDefinition>
+            <RowDefinition></RowDefinition>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition></ColumnDefinition>
+            <ColumnDefinition></ColumnDefinition>
+            <ColumnDefinition></ColumnDefinition>
+            <ColumnDefinition></ColumnDefinition>
+        </Grid.ColumnDefinitions>
+
+        <StackPanel 
+        Grid.ColumnSpan="4"
+        Margin="0,0,22,19"
+        Grid.RowSpan="2"/>
+
+        <Rectangle
+         Fill="LightGray" 
+         Height="4" 
+         Grid.ColumnSpan="4" 
+         VerticalAlignment="Bottom"
+         Grid.Row="1" 
+         
+         Margin="30,0,30,105"
+         Grid.RowSpan="2"/>
+
+        <TextBlock
+         x:Name="TextBlk"
+         FontFamily="OCR A Extended"
+         VerticalAlignment="Top"
+         HorizontalAlignment="Left"
+         Height="60" 
+         Width="490"   
+         Grid.ColumnSpan="4"
+         FontSize="40"
+         Foreground="Gray"
+         TextAlignment="Right"
+         Text=""
+         FontWeight="Light"
+         Margin="30,35,0,0"/>
+
+        <TextBox
+         x:Name="TextBox"
+         FontFamily="OCR A Extended"
+         VerticalAlignment="Top"
+         HorizontalAlignment="Left"
+         BorderThickness="0"
+         Height="100" 
+         Width="490"   
+         Grid.ColumnSpan="4"
+         FontSize="70"
+         Foreground="Black"
+         TextAlignment="Right"
+         Text=""
+         FontWeight="Light"
+         Margin="30,96,0,0"
+         Grid.RowSpan="2"/>
+        <StackPanel/>
+
+
+        <Button 
+         x:Name="myButton"
+         VerticalAlignment="Center"
+         HorizontalAlignment="Center"
+         Content="C"
+         FontFamily="OCR A Extended"
+         FontSize="40"
+         Foreground="White"
+         Height="100" 
+         Width="100"
+         Grid.Row="2" 
+         BorderThickness="0"    
+         RenderTransformOrigin="0.042,0.6" 
+         Click="myButton_Click">
+            <Button.Template>
+                <ControlTemplate 
+                 TargetType="Button">
+                    <Border CornerRadius="100"
+                BorderBrush="{TemplateBinding BorderBrush}"
+                BorderThickness="{TemplateBinding BorderThickness}"
+                Background="{TemplateBinding Background}"
+                Height="{TemplateBinding Height}"
+                Width="{TemplateBinding Width}" >
+                        <ContentControl Margin="{TemplateBinding Padding}"
+                        HorizontalAlignment="{TemplateBinding HorizontalContentAlignment}"
+                        VerticalAlignment="{TemplateBinding VerticalContentAlignment}"
+                        Content="{TemplateBinding Content}" />
+                    </Border>
+                    <!--<ControlTemplate.Triggers>
+                        <Trigger Property="IsMouseOver" 
+                          Value="True">
+                            <Setter Property="Background" 
+                           Value="Purple"/>
+                        </Trigger>
+                    </ControlTemplate.Triggers>-->
+                </ControlTemplate>
+            </Button.Template>
+            <Button.Background>
+                <LinearGradientBrush>
+                    <GradientStop Color="White" Offset="0.04" />
+                    <GradientStop Color="Pink" Offset="0.36" />
+                    <GradientStop Color="HotPink" Offset="0.67"/>
+                    <GradientStop Color="MediumPurple" Offset="0.99" />
+                </LinearGradientBrush>
+            </Button.Background>
+        </Button>
+
+        <Button 
+         x:Name="myButton_2"
+         Content="+/-"
+         BorderThickness="0"
+         FontFamily="OCR A Extended"
+         FontSize="40"
+         Foreground="White"
+         Height="100" 
+         Width="100"
+         VerticalAlignment="Center"
+         HorizontalAlignment="Center"
+         Grid.Row="2" 
+         Grid.Column="1"
+         Click="myButton_2_Click">
+            <Button.Template>
+                <ControlTemplate 
+                 TargetType="Button">
+                    <Border CornerRadius="100"
+                BorderBrush="{TemplateBinding BorderBrush}"
+                BorderThickness="{TemplateBinding BorderThickness}"
+                Background="{TemplateBinding Background}"
+                Height="{TemplateBinding Height}"
+                Width="{TemplateBinding Width}" >
+                        <ContentControl Margin="{TemplateBinding Padding}"
+                        HorizontalAlignment="{TemplateBinding HorizontalContentAlignment}"
+                        VerticalAlignment="{TemplateBinding VerticalContentAlignment}"
+                        Content="{TemplateBinding Content}" />
+                    </Border>
+                    <ControlTemplate.Triggers>
+                        <Trigger Property="IsMouseOver" 
+                          Value="True">
+                            <Setter Property="Background" 
+                           Value="Purple"/>
+                        </Trigger>
+                    </ControlTemplate.Triggers>
+                </ControlTemplate>
+            </Button.Template>
+            <Button.Background>
+                <LinearGradientBrush>
+                    <GradientStop Color="White" Offset="0.04" />
+                    <GradientStop Color="Pink" Offset="0.36" />
+                    <GradientStop Color="HotPink" Offset="0.67"/>
+                    <GradientStop Color="MediumPurple" Offset="0.99" />
+                </LinearGradientBrush>
+            </Button.Background>
+        </Button>
+
+        <Button 
+         x:Name="myButton_3"
+         Content="%"
+         FontFamily="OCR A Extended"
+         FontSize="40"
+         Foreground="White"
+         BorderThickness="0"
+         Height="100" 
+         Width="100"
+         VerticalAlignment="Center"
+         HorizontalAlignment="Center"
+         Grid.Row="2" 
+         Grid.Column="2" 
+         Click="myButton_3_Click">
+            <Button.Template>
+                <ControlTemplate 
+                 TargetType="Button">
+                    <Border CornerRadius="100"
+                BorderBrush="{TemplateBinding BorderBrush}"
+                BorderThickness="{TemplateBinding BorderThickness}"
+                Background="{TemplateBinding Background}"
+                Height="{TemplateBinding Height}"
+                Width="{TemplateBinding Width}" >
+                        <ContentControl Margin="{TemplateBinding Padding}"
+                        HorizontalAlignment="{TemplateBinding HorizontalContentAlignment}"
+                        VerticalAlignment="{TemplateBinding VerticalContentAlignment}"
+                        Content="{TemplateBinding Content}" />
+                    </Border>
+                    <ControlTemplate.Triggers>
+                        <Trigger Property="IsMouseOver" 
+                          Value="True">
+                            <Setter Property="Background" 
+                           Value="Purple"/>
+                        </Trigger>
+                    </ControlTemplate.Triggers>
+                </ControlTemplate>
+            </Button.Template>
+            <Button.Background>
+                <LinearGradientBrush>
+                    <GradientStop Color="White" Offset="0.04" />
+                    <GradientStop Color="Pink" Offset="0.36" />
+                    <GradientStop Color="HotPink" Offset="0.67"/>
+                    <GradientStop Color="MediumPurple" Offset="0.99" />
+                </LinearGradientBrush>
+            </Button.Background>
+        </Button>
+
+        <Button 
+         x:Name="myButton_4"
+         Content="/"
+         FontFamily="OCR A Extended"
+         FontSize="40"
+         BorderThickness="0"
+         Foreground="White"
+         Height="100" 
+         Width="100" 
+         VerticalAlignment="Center"
+         HorizontalAlignment="Center" 
+         Grid.Row="2" 
+         Grid.Column="3"
+         Click="myButton_4_Click">
+            <Button.Template>
+                <ControlTemplate 
+                 TargetType="Button">
+                    <Border CornerRadius="100"
+                BorderBrush="{TemplateBinding BorderBrush}"
+                BorderThickness="{TemplateBinding BorderThickness}"
+                Background="{TemplateBinding Background}"
+                Height="{TemplateBinding Height}"
+                Width="{TemplateBinding Width}" >
+                        <ContentControl Margin="{TemplateBinding Padding}"
+                        HorizontalAlignment="{TemplateBinding HorizontalContentAlignment}"
+                        VerticalAlignment="{TemplateBinding VerticalContentAlignment}"
+                        Content="{TemplateBinding Content}" />
+                    </Border>
+                    <ControlTemplate.Triggers>
+                        <Trigger Property="IsMouseOver" 
+                          Value="True">
+                            <Setter Property="Background" 
+                           Value="Purple"/>
+                        </Trigger>
+                    </ControlTemplate.Triggers>
+                </ControlTemplate>
+            </Button.Template>
+            <Button.Background>
+                <LinearGradientBrush>
+                    <GradientStop Color="White" Offset="0.04" />
+                    <GradientStop Color="Pink" Offset="0.36" />
+                    <GradientStop Color="HotPink" Offset="0.67"/>
+                    <GradientStop Color="MediumPurple" Offset="0.99" />
+                </LinearGradientBrush>
+            </Button.Background>
+        </Button>
+
+        <Button 
+         x:Name="myButton_5"
+         Content="x"
+         FontFamily="OCR A Extended"
+         FontSize="40"
+         BorderThickness="0"
+         Foreground="White"
+         Height="100" 
+         Width="100"
+         VerticalAlignment="Center"
+         HorizontalAlignment="Center"
+         Grid.Row="3" 
+         Grid.Column="3"
+         Click="myButton_5_Click">
+            <Button.Template>
+                <ControlTemplate 
+                 TargetType="Button">
+                    <Border CornerRadius="100"
+                BorderBrush="{TemplateBinding BorderBrush}"
+                BorderThickness="{TemplateBinding BorderThickness}"
+                Background="{TemplateBinding Background}"
+                Height="{TemplateBinding Height}"
+                Width="{TemplateBinding Width}" >
+                        <ContentControl Margin="{TemplateBinding Padding}"
+                        HorizontalAlignment="{TemplateBinding HorizontalContentAlignment}"
+                        VerticalAlignment="{TemplateBinding VerticalContentAlignment}"
+                        Content="{TemplateBinding Content}" />
+                    </Border>
+                    <ControlTemplate.Triggers>
+                        <Trigger Property="IsMouseOver" 
+                          Value="True">
+                            <Setter Property="Background" 
+                           Value="Purple"/>
+                        </Trigger>
+                    </ControlTemplate.Triggers>
+                </ControlTemplate>
+            </Button.Template>
+            <Button.Background>
+                <LinearGradientBrush>
+                    <GradientStop Color="White" Offset="0.04" />
+                    <GradientStop Color="Pink" Offset="0.36" />
+                    <GradientStop Color="HotPink" Offset="0.67"/>
+                    <GradientStop Color="MediumPurple" Offset="0.99" />
+                </LinearGradientBrush>
+            </Button.Background>
+        </Button>
+
+
+        <Button 
+         x:Name="myButton_7"
+         Content="-"
+         FontFamily="OCR A Extended"
+         FontSize="40"
+         BorderThickness="0"
+         Foreground="White"
+         Height="100" 
+         Width="100"
+         VerticalAlignment="Center"
+         HorizontalAlignment="Center"
+         Grid.Row="4" 
+         Grid.Column="3"
+         Click="myButton_7_Click">
+            <Button.Template>
+                <ControlTemplate 
+                 TargetType="Button">
+                    <Border CornerRadius="100"
+                BorderBrush="{TemplateBinding BorderBrush}"
+                BorderThickness="{TemplateBinding BorderThickness}"
+                Background="{TemplateBinding Background}"
+                Height="{TemplateBinding Height}"
+                Width="{TemplateBinding Width}" >
+                        <ContentControl Margin="{TemplateBinding Padding}"
+                        HorizontalAlignment="{TemplateBinding HorizontalContentAlignment}"
+                        VerticalAlignment="{TemplateBinding VerticalContentAlignment}"
+                        Content="{TemplateBinding Content}" />
+                    </Border>
+                    <ControlTemplate.Triggers>
+                        <Trigger Property="IsMouseOver" 
+                          Value="True">
+                            <Setter Property="Background" 
+                           Value="Purple"/>
+                        </Trigger>
+                    </ControlTemplate.Triggers>
+                </ControlTemplate>
+            </Button.Template>
+            <Button.Background>
+                <LinearGradientBrush>
+                    <GradientStop Color="White" Offset="0.04" />
+                    <GradientStop Color="Pink" Offset="0.36" />
+                    <GradientStop Color="HotPink" Offset="0.67"/>
+                    <GradientStop Color="MediumPurple" Offset="0.99" />
+                </LinearGradientBrush>
+            </Button.Background>
+        </Button>
+
+        <Button 
+         x:Name="myButton_9"
+         Content="+"
+         FontFamily="OCR A Extended"
+         FontSize="40"
+         Height="100" 
+         Width="100"
+         BorderThickness="0"
+         Foreground="White"
+         VerticalAlignment="Top"
+         HorizontalAlignment="Center"
+         Grid.Row="5" 
+         Grid.Column="3"
+         Click="myButton_9_Click" Margin="0,3,0,0">
+            <Button.Template>
+                <ControlTemplate 
+                 TargetType="Button">
+                    <Border CornerRadius="100"
+                BorderBrush="{TemplateBinding BorderBrush}"
+                BorderThickness="{TemplateBinding BorderThickness}"
+                Background="{TemplateBinding Background}"
+                Height="{TemplateBinding Height}"
+                Width="{TemplateBinding Width}" >
+                        <ContentControl Margin="{TemplateBinding Padding}"
+                        HorizontalAlignment="{TemplateBinding HorizontalContentAlignment}"
+                        VerticalAlignment="{TemplateBinding VerticalContentAlignment}"
+                        Content="{TemplateBinding Content}" />
+                    </Border>
+                    <ControlTemplate.Triggers>
+                        <Trigger Property="IsMouseOver" 
+                          Value="True">
+                            <Setter Property="Background" 
+                           Value="Purple"/>
+                        </Trigger>
+                    </ControlTemplate.Triggers>
+                </ControlTemplate>
+            </Button.Template>
+            <Button.Background>
+                <LinearGradientBrush>
+                    <GradientStop Color="White" Offset="0.04" />
+                    <GradientStop Color="Pink" Offset="0.36" />
+                    <GradientStop Color="HotPink" Offset="0.67"/>
+                    <GradientStop Color="MediumPurple" Offset="0.99" />
+                </LinearGradientBrush>
+            </Button.Background>
+        </Button>
+
+        <Button 
+         x:Name="myButton_10"
+         Content="7"
+         FontFamily="OCR A Extended"
+         FontSize="40"
+         Foreground="Black"
+         Height="100" 
+         BorderThickness="0"
+         Width="100"
+         Background="LightGray" 
+         VerticalAlignment="Center"
+         HorizontalAlignment="Center"
+         Grid.Row="3"
+            
+         Click="myButton_10_Click">
+            <Button.Template>
+                <ControlTemplate 
+                 TargetType="Button">
+                    <Border CornerRadius="100"
+                BorderBrush="{TemplateBinding BorderBrush}"
+                BorderThickness="{TemplateBinding BorderThickness}"
+                Background="{TemplateBinding Background}"
+                Height="{TemplateBinding Height}"
+                Width="{TemplateBinding Width}" >
+                        <ContentControl Margin="{TemplateBinding Padding}"
+                        HorizontalAlignment="{TemplateBinding HorizontalContentAlignment}"
+                        VerticalAlignment="{TemplateBinding VerticalContentAlignment}"
+                        Content="{TemplateBinding Content}" />
+                    </Border>
+                    <ControlTemplate.Triggers>
+                        <Trigger Property="IsMouseOver" 
+                          Value="True">
+                            <Setter Property="Background" 
+                           Value="Pink"/>
+                        </Trigger>
+                    </ControlTemplate.Triggers>
+                </ControlTemplate>
+            </Button.Template>
+        </Button>
+
+        <Button 
+         x:Name="myButton_11"
+         Content="4"
+         FontFamily="OCR A Extended"
+         FontSize="40"
+         Foreground="Black"
+         Height="100" 
+         BorderThickness="0"
+         Width="100"
+         Background="LightGray" 
+         VerticalAlignment="Center"
+         HorizontalAlignment="Center"
+         Grid.Row="4" 
+         Click="myButton_11_Click">
+            <Button.Template>
+                <ControlTemplate
+                 TargetType="Button">
+                    <Border CornerRadius="100"
+                BorderBrush="{TemplateBinding BorderBrush}"
+                BorderThickness="{TemplateBinding BorderThickness}"
+                Background="{TemplateBinding Background}"
+                Height="{TemplateBinding Height}"
+                Width="{TemplateBinding Width}" >
+                        <ContentControl Margin="{TemplateBinding Padding}"
+                        HorizontalAlignment="{TemplateBinding HorizontalContentAlignment}"
+                        VerticalAlignment="{TemplateBinding VerticalContentAlignment}"
+                        Content="{TemplateBinding Content}" />
+                    </Border>
+                    <ControlTemplate.Triggers>
+                        <Trigger Property="IsMouseOver" 
+                          Value="True">
+                            <Setter Property="Background" 
+                           Value="Pink"/>
+                        </Trigger>
+                    </ControlTemplate.Triggers>
+                </ControlTemplate>
+            </Button.Template>
+        </Button>
+
+        <Button
+         x:Name="myButton_12"
+         Content="1"  
+         FontFamily="OCR A Extended"
+         FontSize="40"
+         Foreground="Black"
+         Height="100" 
+         BorderThickness="0"
+         Width="100"
+         Background="LightGray" 
+         VerticalAlignment="Center"
+         HorizontalAlignment="Center"
+         Grid.Row="5" 
+         Click="myButton_12_Click">
+            <Button.Template>
+                <ControlTemplate 
+                 TargetType="Button">
+                    <Border CornerRadius="100"
+                BorderBrush="{TemplateBinding BorderBrush}"
+                BorderThickness="{TemplateBinding BorderThickness}"
+                Background="{TemplateBinding Background}"
+                Height="{TemplateBinding Height}"
+                Width="{TemplateBinding Width}" >
+                        <ContentControl Margin="{TemplateBinding Padding}"
+                        HorizontalAlignment="{TemplateBinding HorizontalContentAlignment}"
+                        VerticalAlignment="{TemplateBinding VerticalContentAlignment}"
+                        Content="{TemplateBinding Content}" />
+                    </Border>
+                    <ControlTemplate.Triggers>
+                        <Trigger Property="IsMouseOver" 
+                          Value="True">
+                            <Setter Property="Background" 
+                           Value="Pink"/>
+                        </Trigger>
+                    </ControlTemplate.Triggers>
+                </ControlTemplate>
+            </Button.Template>
+        </Button>
+
+        <Button 
+            
+         x:Name="myButton_13"
+         Content="0"
+         FontFamily="OCR A Extended"
+         FontSize="40"
+         Foreground="Black"
+         Height="100" 
+         BorderThickness="0"
+         Width="100"
+         Background="LightGray" 
+         VerticalAlignment="Center"
+         HorizontalAlignment="Center"
+         Grid.Row="6" 
+         Click="myButton_13_Click">
+            <Button.Template>
+                <ControlTemplate
+                 TargetType="Button">
+                    <Border CornerRadius="100"
+                BorderBrush="{TemplateBinding BorderBrush}"
+                BorderThickness="{TemplateBinding BorderThickness}"
+                Background="{TemplateBinding Background}"
+                Height="{TemplateBinding Height}"
+                Width="{TemplateBinding Width}" >
+                        <ContentControl Margin="{TemplateBinding Padding}"
+                        HorizontalAlignment="{TemplateBinding HorizontalContentAlignment}"
+                        VerticalAlignment="{TemplateBinding VerticalContentAlignment}"
+                        Content="{TemplateBinding Content}" />
+                    </Border>
+                    <ControlTemplate.Triggers>
+                        <Trigger Property="IsMouseOver" 
+                          Value="True">
+                            <Setter Property="Background" 
+                           Value="Pink"/>
+                        </Trigger>
+                    </ControlTemplate.Triggers>
+                </ControlTemplate>
+            </Button.Template>
+        </Button>
+
+        <Button 
+         x:Name="myButton_14"
+         Content=","
+         FontFamily="OCR A Extended"
+         FontSize="40"
+         Foreground="Black"
+         Height="100" 
+         BorderThickness="0"
+         Width="100"
+         Background="LightGray" 
+         VerticalAlignment="Center"
+         HorizontalAlignment="Center"
+         Grid.Row="6" 
+         Grid.Column="1"
+         Click="myButton_14_Click">
+            <Button.Template>
+                <ControlTemplate 
+                 TargetType="Button">
+                    <Border CornerRadius="100"
+                BorderBrush="{TemplateBinding BorderBrush}"
+                BorderThickness="{TemplateBinding BorderThickness}"
+                Background="{TemplateBinding Background}"
+                Height="{TemplateBinding Height}"
+                Width="{TemplateBinding Width}" >
+                        <ContentControl Margin="{TemplateBinding Padding}"
+                        HorizontalAlignment="{TemplateBinding HorizontalContentAlignment}"
+                        VerticalAlignment="{TemplateBinding VerticalContentAlignment}"
+                        Content="{TemplateBinding Content}" />
+                    </Border>
+                    <ControlTemplate.Triggers>
+                        <Trigger Property="IsMouseOver" 
+                          Value="True">
+                            <Setter Property="Background" 
+                           Value="Pink"/>
+                        </Trigger>
+                    </ControlTemplate.Triggers>
+                </ControlTemplate>
+            </Button.Template>
+        </Button>
+
+        <Button 
+         x:Name="myButton_15"
+         Content="="
+         FontFamily="OCR A Extended"
+         FontSize="40"
+         Foreground="White"
+         Height="80" 
+         Width="230"
+         BorderThickness="0"
+         Background="Gray" 
+         VerticalAlignment="Center"
+         HorizontalAlignment="Center" 
+         Grid.Row="6"
+         Grid.Column="2"
+         Grid.ColumnSpan="2"
+         Click="myButton_15_Click">
+            <Button.Template>
+                <ControlTemplate 
+                 TargetType="Button">
+                    <Border CornerRadius="50"
+                BorderBrush="{TemplateBinding BorderBrush}"
+                BorderThickness="{TemplateBinding BorderThickness}"
+                Background="{TemplateBinding Background}"
+                Height="{TemplateBinding Height}"
+                Width="{TemplateBinding Width}" >
+                        <ContentControl Margin="{TemplateBinding Padding}"
+                        HorizontalAlignment="{TemplateBinding HorizontalContentAlignment}"
+                        VerticalAlignment="{TemplateBinding VerticalContentAlignment}"
+                        Content="{TemplateBinding Content}" />
+                    </Border>
+                    <ControlTemplate.Triggers>
+                        <Trigger Property="IsMouseOver" 
+                          Value="True">
+                            <Setter Property="Background" 
+                           Value="Pink"/>
+                        </Trigger>
+                    </ControlTemplate.Triggers>
+                </ControlTemplate>
+            </Button.Template>
+        </Button>
+
+        <Button 
+         x:Name="myButton_16"
+         Content="2"
+         FontFamily="OCR A Extended"
+         FontSize="40"
+         Foreground="Black"
+         Height="100" 
+         BorderThickness="0"
+         Width="100"
+         Background="LightGray" 
+         VerticalAlignment="Bottom"
+         HorizontalAlignment="Center" 
+         Grid.Row="5" 
+         Grid.Column="1"
+         Click="myButton_16_Click" Margin="0,0,0,2">
+            <Button.Template>
+                <ControlTemplate 
+                TargetType="Button">
+                    <Border CornerRadius="100"
+                BorderBrush="{TemplateBinding BorderBrush}"
+                BorderThickness="{TemplateBinding BorderThickness}"
+                Background="{TemplateBinding Background}"
+                Height="{TemplateBinding Height}"
+                Width="{TemplateBinding Width}" >
+                        <ContentControl Margin="{TemplateBinding Padding}"
+                        HorizontalAlignment="{TemplateBinding HorizontalContentAlignment}"
+                        VerticalAlignment="{TemplateBinding VerticalContentAlignment}"
+                        Content="{TemplateBinding Content}" />
+                    </Border>
+                    <ControlTemplate.Triggers>
+                        <Trigger Property="IsMouseOver" 
+                          Value="True">
+                            <Setter Property="Background" 
+                           Value="Pink"/>
+                        </Trigger>
+                    </ControlTemplate.Triggers>
+                </ControlTemplate>
+            </Button.Template>
+        </Button>
+
+        <Button 
+         x:Name="myButton_17"
+         Content="5"
+         FontFamily="OCR A Extended"
+         FontSize="40"
+         Foreground="Black"
+         Height="100" 
+         Width="100"
+         BorderThickness="0"
+         Background="LightGray" 
+         VerticalAlignment="Center"
+         HorizontalAlignment="Center"
+         Grid.Row="4" 
+         Grid.Column="1"
+         Click="myButton_17_Click">
+            <Button.Template>
+                <ControlTemplate 
+                 TargetType="Button">
+                    <Border CornerRadius="100"
+                BorderBrush="{TemplateBinding BorderBrush}"
+                BorderThickness="{TemplateBinding BorderThickness}"
+                Background="{TemplateBinding Background}"
+                Height="{TemplateBinding Height}"
+                Width="{TemplateBinding Width}" >
+                        <ContentControl Margin="{TemplateBinding Padding}"
+                        HorizontalAlignment="{TemplateBinding HorizontalContentAlignment}"
+                        VerticalAlignment="{TemplateBinding VerticalContentAlignment}"
+                        Content="{TemplateBinding Content}" />
+                    </Border>
+                    <ControlTemplate.Triggers>
+                        <Trigger Property="IsMouseOver" 
+                          Value="True">
+                            <Setter Property="Background" 
+                           Value="Pink"/>
+                        </Trigger>
+                    </ControlTemplate.Triggers>
+                </ControlTemplate>
+            </Button.Template>
+        </Button>
+
+        <Button 
+         x:Name="myButton_18"
+         Content="8"
+         FontSize="40"
+         FontFamily="OCR A Extended"
+         Foreground="Black"
+         Height="100" 
+         Width="100"
+         BorderThickness="0"
+         Background="LightGray" 
+         VerticalAlignment="Center"
+         HorizontalAlignment="Center"
+         Grid.Row="3" 
+         Grid.Column="1" 
+         Click="myButton_18_Click">
+            <Button.Template>
+                <ControlTemplate 
+                 TargetType="Button">
+                    <Border CornerRadius="100"
+                BorderBrush="{TemplateBinding BorderBrush}"
+                BorderThickness="{TemplateBinding BorderThickness}"
+                Background="{TemplateBinding Background}"
+                Height="{TemplateBinding Height}"
+                Width="{TemplateBinding Width}" >
+                        <ContentControl Margin="{TemplateBinding Padding}"
+                        HorizontalAlignment="{TemplateBinding HorizontalContentAlignment}"
+                        VerticalAlignment="{TemplateBinding VerticalContentAlignment}"
+                        Content="{TemplateBinding Content}" />
+                    </Border>
+                    <ControlTemplate.Triggers>
+                        <Trigger Property="IsMouseOver" 
+                          Value="True">
+                            <Setter Property="Background" 
+                           Value="Pink"/>
+                        </Trigger>
+                    </ControlTemplate.Triggers>
+                </ControlTemplate>
+            </Button.Template>
+        </Button>
+
+        <Button 
+         x:Name="myButton_19"
+         Content="9"
+         FontFamily="OCR A Extended"
+         FontSize="40"
+         Foreground="Black"
+         Height="100" 
+         BorderThickness="0"
+         Width="100"
+         Background="LightGray" 
+         VerticalAlignment="Center"
+         HorizontalAlignment="Center"
+         Grid.Row="3" 
+         Grid.Column="2" 
+         Click="myButton_19_Click">
+            <Button.Template>
+                <ControlTemplate 
+                 TargetType="Button">
+                    <Border CornerRadius="100"
+                BorderBrush="{TemplateBinding BorderBrush}"
+                BorderThickness="{TemplateBinding BorderThickness}"
+                Background="{TemplateBinding Background}"
+                Height="{TemplateBinding Height}"
+                Width="{TemplateBinding Width}" >
+                        <ContentControl Margin="{TemplateBinding Padding}"
+                        HorizontalAlignment="{TemplateBinding HorizontalContentAlignment}"
+                        VerticalAlignment="{TemplateBinding VerticalContentAlignment}"
+                        Content="{TemplateBinding Content}" />
+                    </Border>
+                    <ControlTemplate.Triggers>
+                        <Trigger Property="IsMouseOver" 
+                          Value="True">
+                            <Setter Property="Background" 
+                           Value="Pink"/>
+                        </Trigger>
+                    </ControlTemplate.Triggers>
+                </ControlTemplate>
+            </Button.Template>
+        </Button>
+
+        <Button 
+         x:Name="myButton_20"
+         Content="6"
+         FontFamily="OCR A Extended"
+         FontSize="40"
+         Foreground="Black"
+         Height="100" 
+         BorderThickness="0"
+         Width="100"
+         Background="LightGray" 
+         VerticalAlignment="Bottom"
+         HorizontalAlignment="Center" 
+         Grid.Row="4"
+         Grid.Column="2"
+         Click="myButton_20_Click"
+         Margin="0,0,0,2">
+            <Button.Template>
+                <ControlTemplate 
+                 TargetType="Button">
+                    <Border CornerRadius="100"
+                BorderBrush="{TemplateBinding BorderBrush}"
+                BorderThickness="{TemplateBinding BorderThickness}"
+                Background="{TemplateBinding Background}"
+                Height="{TemplateBinding Height}"
+                Width="{TemplateBinding Width}" >
+                        <ContentControl Margin="{TemplateBinding Padding}"
+                        HorizontalAlignment="{TemplateBinding HorizontalContentAlignment}"
+                        VerticalAlignment="{TemplateBinding VerticalContentAlignment}"
+                        Content="{TemplateBinding Content}" />
+                    </Border>
+                    <ControlTemplate.Triggers>
+                        <Trigger Property="IsMouseOver" 
+                          Value="True">
+                            <Setter Property="Background" 
+                           Value="Pink"/>
+                        </Trigger>
+                    </ControlTemplate.Triggers>
+                </ControlTemplate>
+            </Button.Template>
+        </Button>
+
+        <Button 
+         x:Name="myButton_21"
+         Content="3"
+         FontFamily="OCR A Extended"
+         FontSize="40"
+         Foreground="Black"
+         Height="100" 
+         BorderThickness="0"
+         Width="100"
+         Background="LightGray" 
+         VerticalAlignment="Center"
+         HorizontalAlignment="Center"
+         Grid.Row="5" 
+         Grid.Column="2"
+         Click="myButton_21_Click">
+            <Button.Template>
+                <ControlTemplate
+                 TargetType="Button">
+                    <Border CornerRadius="100"
+                BorderBrush="{TemplateBinding BorderBrush}"
+                BorderThickness="{TemplateBinding BorderThickness}"
+                Background="{TemplateBinding Background}"
+                Height="{TemplateBinding Height}"
+                Width="{TemplateBinding Width}" >
+                        <ContentControl Margin="{TemplateBinding Padding}"
+                        HorizontalAlignment="{TemplateBinding HorizontalContentAlignment}"
+                        VerticalAlignment="{TemplateBinding VerticalContentAlignment}"
+                        Content="{TemplateBinding Content}" />
+                    </Border>
+                    <ControlTemplate.Triggers>
+                        <Trigger Property="IsMouseOver" 
+                          Value="True">
+                            <Setter Property="Background" 
+                           Value="Pink"/>
+                        </Trigger>
+                    </ControlTemplate.Triggers>
+                </ControlTemplate>
+            </Button.Template>
+        </Button>
+
+    </Grid>
+</Window>
